@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "es2015", "es2017"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noStrictGenericChecks": true
+  },
+  "include": ["./src/**/*"]
+}
