@@ -28,7 +28,7 @@ export const pageQuery = graphql`
 
 class IndexPage extends React.Component<IndexPageProps> {
   public render(): JSX.Element {
-    // console.log('>> styles', styles)
+    console.log('>> styles', styles)
     const { siteName } = this.props.data.site.siteMetadata
 
     return (
