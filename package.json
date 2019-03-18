@@ -13,30 +13,54 @@
     "devDocker": "concurrently --kill-others \"gatsby develop -H 0.0.0.0\" \"SHELL=/bin/bash npm run watch\"",
     "watch": "chokidar \"**/*.scss\" -c \"npm run buildScssTypings\"",
     "fix": "prettier --write 'src/**/*.{ts,tsx,scss,md}' && tslint --fix 'src/**/*.{ts,tsx}' -p tsconfig.json && stylelint --fix 'src/**/*.scss' ",
-    "buildScssTypings": "node scripts/generateTypings.js"
+    "buildScssTypings": "node scripts/generateTypings.js",
+    "eslint": "eslint --fix src/**/*.{ts,tsx}",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix src/**/*.{ts,tsx}",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ],
+    "{*.{json,md}}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.8",
     "@types/react-helmet": "^5.0.7",
+    "@typescript-eslint/eslint-plugin": "1.4.2",
+    "@typescript-eslint/parser": "1.4.2",
     "chokidar-cli": "1.2.1",
-    "gatsby": "^2.0.0",
-    "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
+    "concurrently": "4.1.0",
+    "eslint": "5.15.3",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
     "gatsby-plugin-sass": "^2.0.7",
-    "gatsby-plugin-tslint": "0.0.2",
-    "gatsby-plugin-typescript": "^2.0.3",
-    "gatsby-plugin-typescript-scss-modules": "1.0.7",
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.1.5",
-    "husky": "^1.1.0",
-    "lint-staged": "^7.3.0",
+    "husky": "1.3.1",
+    "lint-staged": "8.1.5",
     "node-gyp": "3.8.0",
     "node-sass": "^4.11.0",
-    "prettier": "^1.14.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0",
+    "prettier": "1.16.4",
+    "prettier-tslint": "0.4.2",
     "stylelint": "^9.6.0",
     "stylelint-config-css-modules": "^1.3.0",
     "stylelint-config-prettier": "^4.0.0",
@@ -53,9 +77,14 @@
     "typescript": "^3.1.1"
   },
   "dependencies": {
-    "concurrently": "4.1.0",
+    "gatsby": "^2.0.0",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-typescript": "2.0.11",
     "gatsby-remark-images": "3.0.1",
     "gatsby-transformer-sharp": "2.1.9",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
     "react-icons": "3.2.2"
   }
 }

@@ -3,8 +3,8 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 
 // import * as styles from './styles.module.scss'
-import * as styles from './styles.module.scss'
 import Greeting from '../components/Greeting'
+import * as styles from './styles.module.scss'
 
 interface IndexPageProps {
   data: {
@@ -27,14 +27,15 @@ export const pageQuery = graphql`
 `
 
 class IndexPage extends React.Component<IndexPageProps> {
-  public render() {
+  public render(): JSX.Element {
     // console.log('>> styles', styles)
     const { siteName } = this.props.data.site.siteMetadata
 
     return (
       <div className={styles.wrapper}>
         <Greeting />
-        Check out the way I typed GraphQL Queries - I am very open for improvements on my {siteName}
+        Check out the way I typed GraphQL Queries - I am very open for
+        improvements on my {siteName}
       </div>
     )
   }
