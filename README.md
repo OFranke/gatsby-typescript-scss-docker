@@ -1,16 +1,14 @@
 # Description
 
-The purpose of this project is to have a gatsby dev environment that is as convenient as possible, it should be plug & play. PRs and hints for improvement are always welcome - especially if you have ideas how to make graphQL Queries more typable :-)
-
-# Some recent notes on why to use typescript :-)
-
-- https://link.medium.com/4m6wVVuAAS
+The purpose of this project is to create a gatsby dev environment that is a starting point for production projects.
 
 # Features
 
-- Format Safe by TSLint, StyleLint and Prettier with Lint-Staged (Husky)
+- Format Safe by ESLint, StyleLint and Prettier with Lint-Staged (Husky)
 - Typings for scss files are automatically generated, you can import you styles like `import * as styles from './styles.module.scss'` and then use it like `<div className={styles.textWrapper}>`
-- You can run gatsby dev mode on your machine environment or with docker-compose - the docker image is based on the official node docker image
+- responsiveness from the beginning through easy breakpoint configuration
+- enforce the DRY principle, no hardcoded and repeated `margin`, `font-size`, `color`, `box-shadow`, `border-radius` ... properties anymore
+- docker ready - you can run gatsby dev mode on your machine environment or with docker-compose - the docker image is based on the official node docker image
 
 # NPM scripts explained
 

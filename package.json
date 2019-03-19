@@ -12,7 +12,7 @@
     "devLocal": "concurrently --kill-others \"gatsby develop\" \"npm run watch\"",
     "devDocker": "concurrently --kill-others \"gatsby develop -H 0.0.0.0\" \"SHELL=/bin/bash npm run watch\"",
     "watch": "chokidar \"**/*.scss\" -c \"npm run buildScssTypings\"",
-    "fix": "prettier --write 'src/**/*.{ts,tsx,scss,md}' && tslint --fix 'src/**/*.{ts,tsx}' -p tsconfig.json && stylelint --fix 'src/**/*.scss' ",
+    "fix": "prettier --write 'src/**/*.{ts,tsx,scss,md}' && eslint --fix 'src/**/*.{ts,tsx}' && stylelint --fix 'src/**/*.scss' ",
     "buildScssTypings": "node scripts/generateTypings.js"
   },
   "husky": {

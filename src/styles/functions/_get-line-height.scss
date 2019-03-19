@@ -1,8 +1,4 @@
-@function get-line-height(
-  $key,
-  $viewport-context: smaller-viewport,
-  $map: $map-text-sizes
-) {
+@function get-line-height($key, $viewport-context, $map: $map-text-sizes) {
   @if map-has-key($map, $key) {
     @return get-map-deep($map, $key, $viewport-context, 'line-height');
   } @else {
