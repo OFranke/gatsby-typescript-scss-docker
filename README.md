@@ -2,7 +2,6 @@
 
 The purpose of this project is to have a gatsby dev environment that is as convenient as possible, it should be plug & play. PRs and hints for improvement are always welcome - especially if you have ideas how to make graphQL Queries more typable :-)
 
-
 # Some recent notes on why to use typescript :-)
 
 - https://link.medium.com/4m6wVVuAAS
@@ -41,3 +40,31 @@ The purpose of this project is to have a gatsby dev environment that is as conve
 ## Todo:
 
 [ ] adjust generateTypings script to just rebuild the typings for recently changed files and not for all files
+
+## VS Code Extensions
+
+- VS Code command line tools have to be installed
+- receive a list of current installed extensions: `code --list-extensions | xargs -L 1 echo code --install-extension`
+
+# Install those extensions for a smooth workflow
+
+```
+code --install-extension DSKWRK.vscode-generate-getter-setter
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension eamodio.gitlens
+code --install-extension EditorConfig.EditorConfig
+code --install-extension esbenp.prettier-vscode
+code --install-extension infeng.vscode-react-typescript
+code --install-extension kumar-harsh.graphql-for-vscode
+code --install-extension mikestead.dotenv
+code --install-extension mrmlnc.vscode-scss
+code --install-extension MS-CEINTL.vscode-language-pack-de
+code --install-extension ms-vscode.node-debug2
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension PeterJausovec.vscode-docker
+code --install-extension pmneo.tsimporter
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension wholroyd.jinja
+code --install-extension Zignd.html-css-class-completion
+```

@@ -5,10 +5,8 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
-    'gatsby-plugin-typescript-scss-modules',
+    'gatsby-plugin-typescript',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,7 +25,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [],
-      }
+      },
     },
   ],
 }
