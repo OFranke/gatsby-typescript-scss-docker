@@ -4,7 +4,7 @@ The purpose of this project is to create a gatsby dev environment that is a star
 
 # Features
 
-- Format Safe by ESLint, StyleLint and Prettier with Lint-Staged (Husky)
+- Format Safe by ESLint, StyleLint and Prettier with Lint-Staged (Husky), optimized for VS Code (check `.vscode/settings.json`)
 - Typings for scss files are automatically generated, you can import you styles like `import * as styles from './styles.module.scss'` and then use it like `<div className={styles.textWrapper}>`
 - responsiveness from the beginning through easy breakpoint configuration
 - enforce the DRY principle, no hardcoded and repeated `margin`, `font-size`, `color`, `box-shadow`, `border-radius` ... properties anymore
@@ -35,16 +35,12 @@ The purpose of this project is to create a gatsby dev environment that is a star
 - run `docker-compose up` to start the
 - access http://localhost:8000/
 
-## Todo:
-
-[ ] adjust generateTypings script to just rebuild the typings for recently changed files and not for all files
-
 ## VS Code Extensions
 
 - VS Code command line tools have to be installed
 - receive a list of current installed extensions: `code --list-extensions | xargs -L 1 echo code --install-extension`
 
-# Install those extensions for a smooth workflow
+### Install those extensions for a smooth workflow
 
 ```
 code --install-extension DSKWRK.vscode-generate-getter-setter
@@ -66,3 +62,73 @@ code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension wholroyd.jinja
 code --install-extension Zignd.html-css-class-completion
 ```
+
+# Documentation
+
+`.vscode/settings.json`
+
+- configuration to basically format everything on save
+
+`scripts/generateTypings.js`
+
+- looks for `.scss` files and creates typings for them, so you have type hints on your imported style classes
+
+`src/assets`
+
+- put any assets in here
+
+`src/components`
+
+- base directory for components that work with absolute imports, e.g. `import Greeting from 'components/Greeting'` instead of `import Greeting from '../components/Greeting'`
+
+`src/gatsby/createPages.ts`
+
+- basic entry point to create pages, here you can put any hook that you would normaly put into `gatsby-node.js`, e.g. `onCreatePage`, `onPostBuild`
+
+`src/gatsby/routes.ts`
+
+- a simple object that translates page templates to url paths. Here you could also hook in for multi language path generation
+
+`src/gatsby/types.ts`
+
+- just some defined types
+
+`src/pages/404.tsx`
+
+- default not found page
+
+`src/styles/constants/_breakpoints.scss`
+
+- breakpoints to configure responsive behaviour
+- breakpoints work with `src/styles/vendors/_includemedia.scss`, you can use them in code with an operator like `<, >, =` and the name of the breakpoint
+
+```
+  @include media('>=large') {
+    margin: get-spacing('xl');
+    padding: get-spacing('xl');
+  }
+```
+
+`src/styles/constants/_font-stack.scss`
+
+- constants for loaded fonts
+
+`src/styles/constants/` && `src/styles/functions/` && `src/styles/mixins/`
+
+- those play together to create a responsive, breakpoint-agnostic behaviour. Refer to https://sass-lang.com/guide to get a better understanding on how it works in detail
+- there are some useful defaults like `colors`, `spacings`, `text-sizes`, `text-sizes-title` already implemented
+- all those maps in `src/styles/constants/` can be customized to project specific needs
+
+`src/styles/main.scss`
+
+- just imports constants, functions, mixins and vendors
+
+`src/templates/`
+
+- directory to create page templates
+
+# Todo
+
+[ ] adjust generateTypings script to just rebuild the typings for recently changed files and not for all files
+[ ] add test library and showcase test driven development
+[ ] fix docker

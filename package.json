@@ -1,10 +1,10 @@
 {
   "name": "gatsby-typescript-sass",
-  "description": "gatsby with typescript, scss typed modules, tslint, prettier & husky, running as docker-compose",
+  "description": "gatsby with typescript, scss typed modules, eslint, prettier & husky, docker",
   "version": "1.0.0",
   "author": "Oliver Franke ( oliver.franke@limebit.de )",
   "keywords": [
-    "gatsby, typescript, sass, docker"
+    "gatsby, typescript, sass, docker, eslint, responsive"
   ],
   "license": "MIT",
   "scripts": {
