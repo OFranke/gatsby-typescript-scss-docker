@@ -4,6 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
     'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
     'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
+    'plugin:import/typescript', // Used to enable absolute imports
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
@@ -17,6 +18,25 @@ module.exports = {
       },
     ],
   },
+  // plugins: ["import"],
+  // rules: {
+  //   // turn on errors for missing imports
+  //   "import/no-unresolved": "error"
+  // },
+  // settings: {
+  //   "import/parsers": {
+  //     "@typescript-eslint/parser": [".ts", ".tsx"]
+  //   },
+  //   "import/resolver": {
+  //     // use <root>/tsconfig.json
+  //     "typescript": {},
+
+  //     // use <root>/path/to/folder/tsconfig.json
+  //     "typescript": {
+  //       "directory": "./src"
+  //     }
+  //   }
+  // },
   parserOptions: {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports

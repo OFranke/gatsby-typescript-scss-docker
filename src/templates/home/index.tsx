@@ -1,10 +1,10 @@
 import * as React from 'react'
 import * as styles from './styles.module.scss'
 
-import Greeting from '../components/Greeting'
+import Greeting from '../../components/Greeting'
 import { graphql } from 'gatsby'
 
-interface IndexPageProps {
+interface HomePageProps {
   data: {
     site: {
       siteMetadata: {
@@ -14,8 +14,8 @@ interface IndexPageProps {
   }
 }
 
-export const pageQuery = graphql`
-  query IndexQuery {
+export const homeQuery = graphql`
+  query HomeQuery {
     site {
       siteMetadata {
         siteName
@@ -24,7 +24,7 @@ export const pageQuery = graphql`
   }
 `
 
-class IndexPage extends React.Component<IndexPageProps> {
+class HomePage extends React.Component<HomePageProps> {
   public render(): JSX.Element {
     const { siteName } = this.props.data.site.siteMetadata
 
@@ -38,4 +38,4 @@ class IndexPage extends React.Component<IndexPageProps> {
   }
 }
 
-export default IndexPage
+export default HomePage
