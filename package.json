@@ -14,7 +14,6 @@
     "watch": "chokidar \"**/*.scss\" -c \"npm run buildScssTypings\"",
     "fix": "prettier --write 'src/**/*.{ts,tsx,scss,md}' && tslint --fix 'src/**/*.{ts,tsx}' -p tsconfig.json && stylelint --fix 'src/**/*.scss' ",
     "buildScssTypings": "node scripts/generateTypings.js",
-    "eslint": "eslint --fix src/**/*.{ts,tsx}",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "husky": {
@@ -24,6 +23,7 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
+      "eslint src/**/*.{ts,tsx} --max-warnings 0",
       "eslint --fix src/**/*.{ts,tsx}",
       "git add"
     ],
