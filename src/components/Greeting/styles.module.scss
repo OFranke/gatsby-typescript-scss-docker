@@ -1,3 +1,6 @@
 .text {
-  font-size: 30px;
+  background-color: get-color('grey', '50');
+  @include border-radius('small');
+  @include text-title('m');
+  font-family: $font-stack-default;
 }

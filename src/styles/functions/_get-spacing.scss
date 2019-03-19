@@ -1,0 +1,13 @@
+@function get-spacing($key, $negative: false, $spacing-map: $map-spacing) {
+  $factor: 1 !default;
+  @if $negative {
+    $factor: -1;
+  }
+
+  @if map-has-key($spacing-map, $key) {
+    @return map-get($spacing-map, $key) * $factor;
+  } @else {
+    @error 'No matching spacing key found for `#{$key}` in spacing map.';
+    @return null;
+  }
+}

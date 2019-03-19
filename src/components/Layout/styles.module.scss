@@ -1,0 +1,60 @@
+.layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.responsiveContainer {
+  margin-top: $header-height;
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'Inconsolata Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/Inconsolata-Regular.tff') format('tff');
+}
+
+@font-face {
+  font-family: 'Inconsolata Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/Inconsolata-Bold.tff') format('tff');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: get-color('base', 'text-default');
+  font-family: $font-stack-default;
+  @include text('m');
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-stack-headlines;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: unset;
+  text-decoration: unset;
+}
+
+button {
+  border-width: 0;
+  box-shadow: none;
+}

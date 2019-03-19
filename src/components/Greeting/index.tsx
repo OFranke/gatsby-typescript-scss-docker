@@ -5,8 +5,11 @@ class Greeting extends React.PureComponent {
   public render(): JSX.Element {
     return (
       <div className={styles.text}>
-        Thanks for checking out - if you have feedback or want to say anything,
-        just reach out to me at oliver.franke@limebit.de
+        <h1>Thanks for checking out</h1>
+        <span>
+          if you have feedback or want to say anything, just reach out to me at
+          oliver.franke@limebit.de
+        </span>
       </div>
     )
   }

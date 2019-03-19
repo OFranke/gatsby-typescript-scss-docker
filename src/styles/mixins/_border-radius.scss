@@ -1,0 +1,15 @@
+@mixin border-radius($size) {
+  @if ($size == 'small') {
+    border-radius: get-border-radius('small');
+  } @else if($size == 'medium') {
+    border-radius: get-border-radius('medium');
+    @include media('<=medium') {
+      border-radius: get-border-radius('small');
+    }
+  } @else if($size == 'large') {
+    border-radius: get-border-radius('large');
+    @include media('<=medium') {
+      border-radius: get-border-radius('medium');
+    }
+  }
+}

@@ -1,0 +1,20 @@
+$map-text-sizes: (
+  'm': (
+    'small': (
+      'font-size': 14px,
+      'line-height': 18px,
+    ),
+    'medium': (
+      'font-size': 16px,
+      'line-height': 20px,
+    ),
+    'large': (
+      'font-size': 18px,
+      'line-height': 22px,
+    ),
+    'xlarge': (
+      'font-size': 22px,
+      'line-height': 26px,
+    ),
+  ),
+) !default;

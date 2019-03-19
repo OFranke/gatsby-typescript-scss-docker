@@ -1,0 +1,8 @@
+@function get-border-radius($key, $radius-map: $map-border-radius) {
+  @if map-has-key($radius-map, $key) {
+    @return map-get($radius-map, $key);
+  } @else {
+    @error 'No matching radius key found for `#{$key}` in radius map.';
+    @return null;
+  }
+}

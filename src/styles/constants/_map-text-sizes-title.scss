@@ -1,0 +1,20 @@
+$map-text-sizes-title: (
+  'm': (
+    'small': (
+      'font-size': 16px,
+      'line-height': 20px,
+    ),
+    'medium': (
+      'font-size': 18px,
+      'line-height': 22px,
+    ),
+    'large': (
+      'font-size': 22px,
+      'line-height': 26px,
+    ),
+    'xlarge': (
+      'font-size': 26px,
+      'line-height': 30px,
+    ),
+  ),
+) !default;
