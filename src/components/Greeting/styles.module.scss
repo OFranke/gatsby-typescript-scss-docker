@@ -1,0 +1,17 @@
+.textWrapper {
+  @include border-radius('large');
+  @include text('m');
+  font-family: $font-stack-default;
+  background-color: get-color('grey', '50');
+  margin: get-spacing('m');
+  padding: get-spacing('m');
+
+  @include media('>=large') {
+    margin: get-spacing('xl');
+    padding: get-spacing('xl');
+  }
+}
+
+.feedback {
+  margin-top: get-spacing('m');
+}

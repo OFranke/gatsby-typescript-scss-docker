@@ -1,0 +1,56 @@
+$map-text-sizes: (
+  's': (
+    'small': (
+      'font-size': 10px,
+      'line-height': 1.1,
+    ),
+    'medium': (
+      'font-size': 14px,
+      'line-height': 1.1,
+    ),
+    'large': (
+      'font-size': 18px,
+      'line-height': 1.1,
+    ),
+    'xlarge': (
+      'font-size': 22px,
+      'line-height': 1.1,
+    ),
+  ),
+  'm': (
+    'small': (
+      'font-size': 14px,
+      'line-height': 1.1,
+    ),
+    'medium': (
+      'font-size': 18px,
+      'line-height': 1.1,
+    ),
+    'large': (
+      'font-size': 22px,
+      'line-height': 1.1,
+    ),
+    'xlarge': (
+      'font-size': 26px,
+      'line-height': 1.1,
+    ),
+  ),
+  'l': (
+    'small': (
+      'font-size': 18px,
+      'line-height': 1.1,
+    ),
+    'medium': (
+      'font-size': 22px,
+      'line-height': 1.1,
+    ),
+    'large': (
+      'font-size': 26px,
+      'line-height': 1.1,
+    ),
+    'xlarge': (
+      'font-size': 30px,
+      'line-height': 1.1,
+    ),
+  ),
+) !default;

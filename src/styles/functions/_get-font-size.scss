@@ -1,0 +1,8 @@
+@function get-font-size($key, $viewport-context, $map: $map-text-sizes) {
+  @if map-has-key($map, $key) {
+    @return get-map-deep($map, $key, $viewport-context, 'font-size');
+  } @else {
+    @error 'No matching font size found for `#{$key}` in font size map #{$map}';
+    @return null;
+  }
+}

@@ -1,0 +1,8 @@
+@function get-line-height($key, $viewport-context, $map: $map-text-sizes) {
+  @if map-has-key($map, $key) {
+    @return get-map-deep($map, $key, $viewport-context, 'line-height');
+  } @else {
+    @error 'No matching line-height found for `#{$key}` in font size map.';
+    @return null;
+  }
+}

@@ -1,0 +1,51 @@
+@mixin text($size) {
+  font-size: get-font-size(
+    $size,
+    $map: $map-text-sizes,
+    $viewport-context: 'small'
+  );
+  line-height: get-line-height(
+    $size,
+    $map: $map-text-sizes,
+    $viewport-context: 'small'
+  );
+
+  @media (min-width: #{map-get($breakpoints, 'medium')}) {
+    font-size: get-font-size(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'medium'
+    );
+    line-height: get-line-height(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'medium'
+    );
+  }
+
+  @media (min-width: #{map-get($breakpoints, 'large')}) {
+    font-size: get-font-size(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'large'
+    );
+    line-height: get-line-height(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'large'
+    );
+  }
+
+  @media (min-width: #{map-get($breakpoints, 'xlarge')}) {
+    font-size: get-font-size(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'xlarge'
+    );
+    line-height: get-line-height(
+      $size,
+      $map: $map-text-sizes,
+      $viewport-context: 'xlarge'
+    );
+  }
+}
