@@ -58,6 +58,7 @@
     "lint-staged": "8.1.5",
     "node-gyp": "3.8.0",
     "node-sass": "^4.11.0",
+    "node-sass-glob-importer": "5.3.1",
     "prettier": "1.16.4",
     "prettier-tslint": "0.4.2",
     "stylelint": "^9.6.0",

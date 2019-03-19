@@ -1,0 +1,3 @@
+@function get-color($key, $prop: 'hex', $color-map: $map-colors) {
+  @return map-get(map-get($color-map, $key), $prop);
+}

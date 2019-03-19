@@ -30,9 +30,7 @@ class HomePage extends React.Component<HomePageProps> {
 
     return (
       <div className={styles.wrapper}>
-        <Greeting />
-        Check out the way I typed GraphQL Queries - I am very open for
-        improvements on my {siteName}
+        <Greeting siteName={siteName} />
       </div>
     )
   }

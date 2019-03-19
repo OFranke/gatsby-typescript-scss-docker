@@ -1,12 +1,25 @@
 const path = require('path')
+const globImporter = require('node-sass-glob-importer')
 module.exports = {
   siteMetadata: {
     siteName: `Gatsby Typescript Boilerplate Project`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     'gatsby-plugin-typescript',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        data: ['@import "main.scss";'],
+        includePaths: ['src/styles'],
+        postCssPlugins: [
+          require('autoprefixer')({
+            grid: true,
+          }),
+        ],
+        importer: globImporter(),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,7 +45,8 @@ module.exports = {
       options: {
         src: path.join(__dirname, 'src'),
         components: path.join(__dirname, 'src/components'),
-      }
+        styles: path.join(__dirname, 'src/styles')
+      },
     },
   ],
 }

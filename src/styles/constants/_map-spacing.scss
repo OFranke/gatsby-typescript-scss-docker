@@ -1,0 +1,13 @@
+$spaceUnit: 16px;
+$map-spacing: (
+  '3xs': 0.25 * $spaceUnit,
+  '2xs': 0.5 * $spaceUnit,
+  'xs': 0.75 * $spaceUnit,
+  's': 1.25 * $spaceUnit,
+  'm': 2 * $spaceUnit,
+  'l': 3.25 * $spaceUnit,
+  'xl': 5.25 * $spaceUnit,
+  '2xl': 8.5 * $spaceUnit,
+  '3xl': 13.75 * $spaceUnit,
+  '4xl': 15 * $spaceUnit,
+) !default;
