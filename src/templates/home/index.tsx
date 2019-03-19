@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as styles from './styles.module.scss'
 
-import Greeting from '../../components/Greeting'
+import Greeting from 'components/Greeting'
 import { graphql } from 'gatsby'
 
 interface HomePageProps {

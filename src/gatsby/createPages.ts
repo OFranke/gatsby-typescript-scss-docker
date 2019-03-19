@@ -1,5 +1,5 @@
+import * as path from 'path'
 import { GatsbyCreatePages, UrlEntry } from './types'
-import path from 'path'
 import routes from './routes'
 
 /**
