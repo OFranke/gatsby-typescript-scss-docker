@@ -1,10 +1,8 @@
 import * as React from 'react'
-
-import { graphql } from 'gatsby'
-
-// import * as styles from './styles.module.scss'
-import Greeting from '../components/Greeting'
 import * as styles from './styles.module.scss'
+
+import Greeting from '../components/Greeting'
+import { graphql } from 'gatsby'
 
 interface IndexPageProps {
   data: {
