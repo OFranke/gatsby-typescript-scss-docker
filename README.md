@@ -4,11 +4,11 @@ The purpose of this project is to create a gatsby dev environment that is a star
 
 # Features
 
-- Format Safe by ESLint, StyleLint and Prettier with Lint-Staged (Husky), optimized for VS Code (check `.vscode/settings.json`)
+- Format & Commit Safe by ESLint, StyleLint and Prettier with Lint-Staged (Husky), optimized for VS Code (check `.vscode/settings.json`)
 - Typings for scss files are automatically generated, you can import you styles like `import * as styles from './styles.module.scss'` and then use it like `<div className={styles.textWrapper}>`
-- responsiveness from the beginning through easy breakpoint configuration
-- enforce the DRY principle, no hardcoded and repeated `margin`, `font-size`, `color`, `box-shadow`, `border-radius` ... properties anymore
-- docker ready - you can run gatsby dev mode on your machine environment or with docker-compose - the docker image is based on the official node docker image
+- Responsiveness from the beginning through easy breakpoint configuration
+- Enforce the DRY principle, no hardcoded and repeated `margin`, `font-size`, `color`, `box-shadow`, `border-radius` ... properties anymore
+- Docker ready - you can run gatsby dev mode on your machine environment or with docker-compose
 
 # NPM scripts explained
 
