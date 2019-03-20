@@ -129,6 +129,6 @@ code --install-extension Zignd.html-css-class-completion
 
 # Todo
 
-[ ] adjust generateTypings script to just rebuild the typings for recently changed files and not for all files
-[ ] add test library and showcase test driven development
-[ ] fix docker
+- [ ] adjust generateTypings script to just rebuild the typings for recently changed files and not for all files
+- [ ] add test library and showcase test driven development
+- [ ] fix docker

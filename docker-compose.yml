@@ -1,4 +1,4 @@
-version: "2"
+version: '2'
 
 volumes:
   node_modules:
@@ -7,14 +7,15 @@ services:
   gatsby:
     container_name: gatsby
     build:
-      context: ./gatsby
-    user: "node"
+      context: .
+    user: 'node'
     working_dir: /home/node/app
     environment:
       - NODE_ENV=development
     volumes:
-      - ./gatsby/:/home/node/app
+      - ./:/home/node/app
+      # mount empty node_modules exclude the node_modules on host system from mounting into the container
       - node_modules:/home/node/app/node_modules
     ports:
-      - "8000:8000"
-    command: "yarn devDocker"
+      - '8000:8000'
+    command: 'yarn devDocker'
