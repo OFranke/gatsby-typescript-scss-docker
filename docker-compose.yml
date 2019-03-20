@@ -14,6 +14,7 @@ services:
       - NODE_ENV=development
     volumes:
       - ./:/home/node/app
+      # mount empty node_modules exclude the node_modules on host system from mounting into the container
       - node_modules:/home/node/app/node_modules
     ports:
       - '8000:8000'
