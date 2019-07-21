@@ -1044,12 +1044,6 @@
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
 
-"@types/css-modules-loader-core@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@types/css-modules-loader-core/-/css-modules-loader-core-1.1.0.tgz#67af15aa16603ac2ffc1d3a7f08547ac809c3005"
-  dependencies:
-    postcss "7.x.x"
-
 "@types/debug@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.29.tgz#a1e514adfbd92f03a224ba54d693111dbf1f3754"
@@ -2469,7 +2463,7 @@ chokidar@2.1.2:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^2.0.2, chokidar@^2.1.2, chokidar@^2.1.6:
+chokidar@^2.0.2, chokidar@^2.0.3, chokidar@^2.1.6:
   version "2.1.6"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.6.tgz#b6cad653a929e244ce8a834244164d241fa954c5"
   dependencies:
@@ -9087,14 +9081,6 @@ postcss@6.0.1:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@7.x.x, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.7:
-  version "7.0.17"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
-  dependencies:
-    chalk "^2.4.2"
-    source-map "^0.6.1"
-    supports-color "^6.1.0"
-
 postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.23:
   version "6.0.23"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
@@ -9102,6 +9088,14 @@ postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.23:
     chalk "^2.4.1"
     source-map "^0.6.1"
     supports-color "^5.4.0"
+
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.5, postcss@^7.0.7:
+  version "7.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.17.tgz#4da1bdff5322d4a0acaab4d87f3e782436bad31f"
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
 
 potrace@^2.1.1:
   version "2.1.2"
@@ -11499,14 +11493,13 @@ type-of@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/type-of/-/type-of-2.0.1.tgz#e72a1741896568e9f628378d816d6912f7f23972"
 
-typed-css-modules@0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/typed-css-modules/-/typed-css-modules-0.6.0.tgz#12fedde8f45cc5d9716bf495cc4ae1c9195da34c"
+typed-css-modules@0.3.7:
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/typed-css-modules/-/typed-css-modules-0.3.7.tgz#430ba9b8bfe9d193dfa4f3bfd34f4f9e2fcf47c7"
   dependencies:
-    "@types/css-modules-loader-core" "^1.1.0"
-    camelcase "^5.3.1"
+    camelcase "^4.1.0"
     chalk "^2.1.0"
-    chokidar "^2.1.2"
+    chokidar "^2.0.3"
     css-modules-loader-core "^1.1.0"
     glob "^7.1.2"
     is-there "^4.4.2"

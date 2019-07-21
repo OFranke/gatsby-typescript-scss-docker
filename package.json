@@ -74,7 +74,7 @@
     "tslint-loader": "3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
     "tslint-react": "4.0.0",
-    "typed-css-modules": "0.6.0",
+    "typed-css-modules": "0.3.7",
     "typescript": "^3.5.3"
   },
   "dependencies": {
